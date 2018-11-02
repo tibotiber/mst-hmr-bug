@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
 import { onSnapshot, getSnapshot } from 'mobx-state-tree'
 import { onError } from 'mobx-react'
 
@@ -20,12 +19,7 @@ if (DEBUG) {
 }
 
 function render () {
-  ReactDOM.render(
-    <AppContainer>
-      <App store={store} />
-    </AppContainer>,
-    document.getElementById('root')
-  )
+  ReactDOM.render(<App store={store} />, document.getElementById('root'))
 }
 
 registerServiceWorker()

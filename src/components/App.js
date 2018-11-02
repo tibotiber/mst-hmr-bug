@@ -4,6 +4,8 @@ import { List } from 'antd'
 import { observer } from 'mobx-react'
 import { values } from 'mobx'
 import { Flex, Box } from 'grid-styled'
+import { hot } from 'react-hot-loader'
+
 import Todo from './Todo'
 import NewTodo from './NewTodo'
 import Counter from './Counter'
@@ -34,4 +36,4 @@ class App extends Component {
   }
 }
 
-export default observer(App)
+export default hot(module)(observer(App))
